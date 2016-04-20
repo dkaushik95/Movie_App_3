@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Movie App 3</string>
+    <string name="title_movie_detail">Movie Detail</string>
+    <string name="title_favouritemovie_list">favourite_movies</string>
+    <string name="title_favouritemovie_detail">favourite_movie Detail</string>
+    <string name="share_using">Share using</string>
+    <string name="badluck">Bad Luck!Network Error</string>
+    <string name="trailer">Trailer</string>
+    <string name="share">Share</string>
+    <string name="plot">Plot</string>
+    <string name="reviews">Reviews</string>
+</resources>

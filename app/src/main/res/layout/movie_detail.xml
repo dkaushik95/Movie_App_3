@@ -1,0 +1,257 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/movie_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:textIsSelectable="true"
+            tools:context="com.ivb.udacity.movieDetailFragment">
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="250sp"
+                android:layout_margin="3sp"
+                card_view:cardCornerRadius="3sp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_margin="10dp"
+                        android:id="@+id/titleimg"
+                        android:layout_width="160sp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/titleText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif"
+                            android:maxLines="1"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            android:textAlignment="center"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:id="@+id/rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10sp"
+                            android:drawableLeft="@drawable/review"
+                            android:drawablePadding="5sp"
+                            android:gravity="top|end"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/calendar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5sp"
+                                android:drawableLeft="@drawable/calendar"
+                                android:drawablePadding="5sp"
+                                android:gravity="center_vertical" />
+
+                            <TextView
+                                android:id="@+id/people"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="5sp"
+                                android:drawablePadding="3sp"
+                                android:drawableRight="@drawable/groups"
+                                android:gravity="center_vertical|right" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3sp"
+                card_view:cardCornerRadius="3sp"
+                card_view:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/youtubeshare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5sp"
+                            android:clickable="true"
+                            android:drawableTint="@android:color/black"
+                            android:text="@string/trailer"
+                            android:textColor="@android:color/black"
+                            android:textSize="20sp"
+                            android:padding="10dp"/>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2sp"
+                            android:layout_marginRight="1sp"
+                            android:background="#e7e7e7" />
+
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/youtubeholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="120sp"
+                        android:layout_marginTop="30dp"
+                        android:padding="20dp">
+
+                        <LinearLayout
+                            android:id="@+id/youtubelayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/youtubeholder"
+                        android:orientation="vertical">
+
+
+
+                        <TextView
+                            android:id="@+id/youtubesharer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:textAlignment="center"
+                            android:text="@string/share"
+                            android:textColor="#FFF"
+                            android:textSize="25sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3sp"
+                card_view:cardCornerRadius="3sp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plot"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2sp"
+                        android:layout_marginRight="1sp"
+                        android:layout_marginTop="3sp"
+                        android:background="#e7e7e7" />
+
+                    <TextView
+                        android:id="@+id/plotsynopsis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:fontFamily="sans-serif" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3sp"
+                card_view:cardCornerRadius="3sp"
+                card_view:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reviews"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:padding="10dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2sp"
+                        android:layout_marginRight="1sp"
+                        android:layout_marginTop="3sp"
+                        android:background="#e7e7e7" />
+
+                    <TextView
+                        android:id="@+id/reviewText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10sp"
+                        android:fontFamily="sans-serif" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_launcher"
+         />
+</android.support.design.widget.CoordinatorLayout>
